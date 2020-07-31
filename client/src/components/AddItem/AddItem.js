@@ -1,4 +1,4 @@
-import React, { memo } from "react";
+import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import { TextField, Paper, Button, Grid } from "@material-ui/core";
 
@@ -10,7 +10,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const AddItem = memo((props) => {
+const AddItem = (props) => {
   const styles = useStyles();
 
   return (
@@ -38,6 +38,6 @@ const AddItem = memo((props) => {
       </Grid>
     </Paper>
   );
-});
+};
 
 export default AddItem;

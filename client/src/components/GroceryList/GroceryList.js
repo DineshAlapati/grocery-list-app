@@ -1,4 +1,4 @@
-import React, { memo } from "react";
+import React from "react";
 import { List, Paper } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 
@@ -13,7 +13,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const GroceryList = memo((props) => {
+const GroceryList = (props) => {
   const styles = useStyles();
 
   if (!props || !props.items || !props.items.length > 0) return null;
@@ -35,6 +35,6 @@ const GroceryList = memo((props) => {
       </Paper>
     </>
   );
-});
+};
 
 export default GroceryList;

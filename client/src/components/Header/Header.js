@@ -1,4 +1,4 @@
-import React, { memo } from "react";
+import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import { AppBar, Toolbar, Typography, Grid } from "@material-ui/core";
 import IconButton from "@material-ui/core/IconButton";
@@ -20,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const Header = memo((props) => {
+const Header = (props) => {
   const classes = useStyles();
 
   return (
@@ -47,6 +47,6 @@ const Header = memo((props) => {
       </Grid>
     </div>
   );
-});
+};
 
 export default Header;
